@@ -5,7 +5,8 @@
     display: flex;
     width: 25%;   
     padding: 2%;
-    background-color:chocolate;
+    background-color:aqua;
+    border-radius: 2rem ;
 }
 
 .page-container{

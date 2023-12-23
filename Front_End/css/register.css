@@ -4,8 +4,9 @@
     align-items: center;
     display: flex;
     width: 25%;   
-    padding: 2%;
-    background-color:chocolate;
+    padding: 1%;
+    background-color:cadetblue;
+    border-radius: 2rem;
 }
 
 .page-container{
