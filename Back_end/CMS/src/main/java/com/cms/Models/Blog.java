@@ -1,11 +1,12 @@
 package com.cms.Models;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
-import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -17,11 +18,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
+@Entity (name="blogs")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class Blog {
     
-	@Id @Generated(strategy = GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column
@@ -44,21 +45,21 @@ public class Blog {
 	private User user;
 	
 	@OneToMany(mappedBy="blog")
-	private List<Favourite> favourites;
+	private List<Favourites> favourites;
 	
 	@OneToMany(mappedBy="blog")
-	private List<comment> comments;
+	private List<Comment> comments;
 	
 	
 	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category,
-			Long user_id) {
+			User user) {
 		super();
 		this.title = title;
 		this.author = author;
 		this.updated_timestamp = updated_timestamp;
 		this.content = content;
 		this.category = category;
-		this.user_id = user_id;
+		this.user = user;
 	}
 	
 }

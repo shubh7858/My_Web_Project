@@ -1,6 +1,6 @@
 package com.cms.Models;
 
-import javax.annotation.Generated;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,9 +14,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
-@Entity(name="comment")
+@Entity(name="comments")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
-public class comment {
+public class Comment {
 
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)	
   private Long id;

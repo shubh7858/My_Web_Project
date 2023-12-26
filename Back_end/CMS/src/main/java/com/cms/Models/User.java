@@ -1,5 +1,7 @@
 package com.cms.Models;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,8 +16,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name="users")
-@Table (name="")
+@Entity
+@Table (name="users")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class User {
 	
@@ -35,16 +37,18 @@ public class User {
 	private String image;
 
 	@OneToMany(cascade = CascadeType.ALL , mappedBy = "user")
-	private List<favourite> favourites;
+	private List<Favourites> favourites;
 	
 	@OneToMany(cascade = CascadeType.ALL , mappedBy = "user")
-	private List<comment> comments;
+	private List<Comment> comments;
+	
+	
 	
 public User(String name,String email,String password,String image) {
 	super();
 	this.name = name;
 	this.email = email;
-	this.password =passwors;
+	this.password =password;
 	this.image = image;
 	
 }
