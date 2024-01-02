@@ -39,3 +39,36 @@ const showRePassword = () => {
 
 };
 
+const showToast = (type, message) => {
+    debugger;
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    toast.style.display = "block";
+    
+    if(type === "success"){
+        toast.style.backgroundColor = "#07bc0c";
+    }else if(type === "error"){
+        toast.style.backgroundColor = "#e74c3c";
+    }else if(type === "warning"){
+        toast.style.backgroundColor = "#f1c40f";
+    }
+    toast.innerHTML = `${message}`;
+
+    setTimeout(function() {
+        toast.style.display = "none";
+        toast.classList.remove('show');
+    }, 3000);
+};
+
+
+const reqFieldsValidation = () => {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var repassword = document.getElementById("re-password").value;
+    if(name === '' || email === '' || password === '' || repassword === ''){
+        showToast("error", "Please fill all the required fileds");
+    }else{
+        return true;
+    }
+};

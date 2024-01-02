@@ -51,6 +51,8 @@ public class Blog {
 	private List<Comment> comments;
 	
 	
+	
+	
 	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category,
 			User user) {
 		super();
@@ -61,5 +63,14 @@ public class Blog {
 		this.category = category;
 		this.user = user;
 	}
+
+
+
+
+	public Blog() {
+		super();
+	}
+	
+	
 	
 }
