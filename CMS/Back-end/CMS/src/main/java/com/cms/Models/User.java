@@ -36,6 +36,9 @@ public class User {
 	@Column
 	private String image;
 
+	private String role;
+	
+	
 	@OneToMany(cascade = CascadeType.ALL , mappedBy = "user")
 	private List<Favourites> favourites;
 	

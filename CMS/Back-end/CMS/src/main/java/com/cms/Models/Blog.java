@@ -49,28 +49,12 @@ public class Blog {
 	
 	@OneToMany(mappedBy="blog")
 	private List<Comment> comments;
+
 	
 	
 	
-	
-	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category,
-			User user) {
-		super();
-		this.title = title;
-		this.author = author;
-		this.updated_timestamp = updated_timestamp;
-		this.content = content;
-		this.category = category;
-		this.user = user;
-	}
 
 
 
-
-	public Blog() {
-		super();
-	}
-	
-	
 	
 }

@@ -7,21 +7,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cms.Models.User;
-import com.cms.services.UserService;
+import com.cms.dto.FavouriteDto;
+import com.cms.services.FavouriteService;
 
-@CrossOrigin("*")
 @RestController
-@RequestMapping("/cms/user")
-public class UserController {
+@CrossOrigin("*")
+@RequestMapping("/cms/like")
+public class FavouritesController {
 	
 	@Autowired
-	private UserService userv;
+	private FavouriteService fser;
 	
-	@PostMapping("/register")
-	public String addUser(@RequestBody User user) {
+	@PostMapping("/blog")
+	public String likeBlog(@RequestBody FavouriteDto fdto) {
 		
-		return userv.registerUser(user);
+		return fser.addLike(fdto);
 	}
-
+	
 }

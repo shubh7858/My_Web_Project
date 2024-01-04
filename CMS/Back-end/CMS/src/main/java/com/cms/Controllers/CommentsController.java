@@ -7,21 +7,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cms.Models.User;
-import com.cms.services.UserService;
+import com.cms.dto.CommentDto;
+import com.cms.Models.Comment;
+import com.cms.services.CommentService;
 
-@CrossOrigin("*")
 @RestController
-@RequestMapping("/cms/user")
-public class UserController {
+@RequestMapping("/cms/comments")
+@CrossOrigin("*")
+public class CommentsController {
 	
 	@Autowired
-	private UserService userv;
+	private CommentService cser;
 	
-	@PostMapping("/register")
-	public String addUser(@RequestBody User user) {
+	@PostMapping("/post")
+	public String postComment(@RequestBody CommentDto comment) {
 		
-		return userv.registerUser(user);
+		return cser.addComment(comment);
 	}
 
 }

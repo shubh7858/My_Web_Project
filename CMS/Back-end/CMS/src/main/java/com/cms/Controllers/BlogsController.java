@@ -1,26 +1,36 @@
 package com.cms.Controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cms.dto.LoginDto;
-import com.cms.services.LoginService;
+import com.cms.dto.BlogDto;
+import com.cms.Models.Blog;
+import com.cms.services.BlogService;
+
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/cms/auth")
-public class AuthController {
+@RequestMapping("/cms/blogs")
+public class BlogsController {
 	
 	@Autowired
-	private LoginService lser;
-
-	@PostMapping("/login")
-	public String login(@RequestBody LoginDto cred) {
-		return lser.validateEmail(cred.getEmail());
+	private BlogService bser;
+	
+	@PostMapping("/add")
+	public String addBlog(BlogDto blog) {
+		return bser.saveBlog(blog);
 	}
+	
+	@GetMapping("/displayAllBlogs")
+	public List<Blog> displayAll(){
+		
+		return bser.showBlogs();
+	}
+	
 }
