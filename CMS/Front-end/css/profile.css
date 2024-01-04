@@ -110,3 +110,153 @@ body{
     width: 5%;
     cursor: pointer;
 }
+
+
+
+
+.footer{
+    background-color: #122b40;
+}
+
+.footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.footer .footer-container .logo{
+    margin-left: 1rem;
+}
+
+.footer .footer-container .box h3,
+.footer .footer-container .box p{
+    color: white;
+}
+
+.footer .footer-container .box .share a{
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    margin-left: .2rem;
+    background: #265073;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.footer .footer-container .box .share a:hover{
+    transform: scale(0.7);    
+}
+
+.footer .footer-container .box .links{
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.4rem 0;
+    text-decoration: none;
+}
+
+.footer .footer-container .box .links i{
+    padding-right: 0.5rem;
+    transition: 0.4s;
+}
+
+.footer .footer-container .box .links:hover i{
+    padding-right: 1.5rem;
+}
+
+.footer .footer-container .newsletter .email{
+    height: 2.5rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    padding-left: 0.5rem;
+}
+
+.footer .footer-container .newsletter .email:focus{
+    outline: none;
+    box-shadow: 0 0 0.4rem 0.3rem rgb(27, 227, 204);
+}
+
+.footer .footer-container .newsletter .btn{
+    transition: 0.2s;
+}
+
+.footer .footer-container .newsletter .btn:hover{
+    transform: scale(0.9);
+}
+
+.footer .credits{
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #122b40;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.modal-content{
+    border: 0.1rem solid white;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(.4rem);
+}
+
+.modal-content .modal-header h1{
+    color: white;
+}
+
+.modal-content .modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+.modal-content .modal-body .old-pass,
+.modal-content .modal-body .new-pass{
+    display: flex;
+    align-items: center;
+}
+
+#eye2, #eye4{
+    display: none;
+}
+
+.modal-content .modal-body input{
+    width: 90%;
+    height: 3rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: white;
+    margin-right: 1rem;
+}
+
+.modal-content .modal-body input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-content .modal-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content .modal-body .icon{
+    cursor: pointer;
+}
+
+.offcanvas{
+    background-color: #9AD0C2;
+}
+
+.offcanvas .offcanvas-body .btn{
+    width: 60%;
+}
