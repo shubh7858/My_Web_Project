@@ -2,6 +2,7 @@ package com.cms.services;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.cms.Models.Blog;
 import com.cms.Models.Comment;
@@ -11,6 +12,7 @@ import com.cms.dao.CommentDao;
 import com.cms.dao.UserDao;
 import com.cms.dto.CommentDto;
 
+@Service
 public class CommentServiceImpl implements CommentService{
 	
 	@Autowired

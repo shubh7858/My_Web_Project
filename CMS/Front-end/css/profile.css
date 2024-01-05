@@ -32,7 +32,7 @@ body{
 .top-section .profile-card{
     background: rgba(0, 0, 0, 0.7);
     padding: 2rem;
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,7 +86,7 @@ body{
     flex-direction: column;
     color: rgba(255, 255, 255, 0.3);
     width: 80%;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .profile-card .profile-info .box{
@@ -99,7 +99,7 @@ body{
 }
 
 .profile-card .profile-info .box .title{
-    width: 30%;
+    width: 20%;
 }
 
 .profile-card .profile-info .box .value{

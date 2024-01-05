@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/profile.css">
 </head>
-<body>
+<body onload="getData()">
 
 
 <!-- ====================== -->
@@ -142,12 +142,12 @@
                 <div class="profile-info">
                     <div class="box">
                         <h3 class="title">Name</h3>
-                        <h3 class="value">: Ram Charan</h3>
+                        <h3 class="value" id="name-value">: Ram Charan</h3>
                         <i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#nameModal"></i>
                     </div>
                     <div class="box">
                         <h3 class="title">Email id</h3>
-                        <h3 class="value">: ramcharan@gmail.com</h3>
+                        <h3 class="value" id="email-value">: ramcharan@gmail.com</h3>
                         <i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#emailModal"></i>
                     </div>
                     <div class="box">
