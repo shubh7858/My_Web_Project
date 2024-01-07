@@ -92,9 +92,13 @@ const getData = () => {
             var nameValue = document.getElementById("name-value");
             var emailValue = document.getElementById("email-value");
             var image = document.getElementById("profile-image");
+            var nameBox = document.getElementById("name-box")
+            var emailBox = document.getElementById("email-box")
             nameValue.innerHTML = ": "+response.name;
             emailValue.innerHTML = ": "+response.email;
             image.src = response.image;
+            nameBox.value=response.name;
+            emailBox.value=response.email;  
         }
         else if(this.readyState === 4 && this.status === 400){
             debugger;
@@ -118,7 +122,7 @@ const updateName = () => {
     const newName = nameBox.value;
     const userId = localStorage.getItem("user_id");
 
-    const url = createUrl('/updatename');
+    const url = createUrl('/user/updatename');
     const body = {id: userId, name: newName};
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {

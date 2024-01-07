@@ -1,3 +1,5 @@
+
+
 .background{
     margin: 0;
     padding: 0;
@@ -15,8 +17,7 @@
 }
 
 .background .nav-options .btn{
-    /* cursor: pointer; */
-    box-shadow: 0 0 0.3rem 0.2rem rgb(229, 202, 30); 
+    box-shadow: 0 0 0.3rem 0.2rem rgb(229, 202, 30);
 }
 
 .center-content{
@@ -25,19 +26,18 @@
     align-items: center;
     width: 75vw;
     height: 80vh;
-    
+    text-align: center;
 }
 
 .center-content .content-header h1{
     font-size: 3rem;
-    text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
+    text-shadow: 0.2rem 0.2rem 0.3rem blue;
 }
 
 .center-content .content-header p{
-font-size: 2rem;
-font-weight: 600;
-text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
-
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0.2rem 0.2rem 0.3rem blue;
 }
 
 .center-content .content-header button{
@@ -45,12 +45,13 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
 }
 
 .center-content .content-header button:hover{
-    transform: scaleX(0.9);
+    transform: scale(0.9);
 }
 
 
-.blogs-section{
 
+
+.blogs-section{
     background-image: linear-gradient(rgba(14, 33, 101, 0.7), rgba(14, 33, 101, 0.7)), url('../images/background.jpg');
     background-size: cover;
     background-position: center;
@@ -80,12 +81,13 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
     display: flex;
     flex-direction: column;
     width: 20%;
-    border: 1px solid cornsilk;
+    border: 1px solid white;
     border-radius: 1rem;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(0.4rem);
-    color: azure;
+    color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .blogs-section .top-blogs .blog:hover{
@@ -109,16 +111,19 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
 }
 
 .blogs-section .top-blogs .blog .date{
-   display: flex;
-   justify-content: center;
-   font-size: 0.8rem;
-  
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
 }
 
 .blogs-section .top-blogs .blog p{
-    padding:  0 1rem 0 1rem;
-    
+    padding: 0 1rem 0 1rem;
 }
+
+
+
+
+
 
 .about{
     display: flex;
@@ -127,22 +132,20 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
 .about .one{
     width: 25%;
     background-color: #9AD0C2;
-    color: #265d73;
+    color: #265D73;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .about .one h1{
     font-size: 4rem;
-
 }
 
 .about .two{
     width: 75%;
-    background-color:#265d73;
-    color:#9AD0C2;
+    background-color: #265D73;
+    color: #9AD0C2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,25 +153,48 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
     gap: 2rem;
 }
 
-.about .two .person{
-    display: flex;
+.about .two{
+    gap: 1rem;
 }
 
-.about .two .person .person-info{
+.about .two h4{
     padding-left: 2rem;
+}
+
+.about .two p{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-align: justify;
+}
+
+.about .two .persons{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.about .two .persons .person{
+    width: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
-.about .two .person img{
+.about .two .persons .person img{
     height: 8rem;
     width: 8rem;
+    border-radius: 50%;
 }
 
-.about .two .person .person-info h3{
-    font-size: 2rem;
+.about .two .persons .person p{
+    padding-left: 0;
+    padding-right: 0;
 }
+
+
+
 
 .footer{
     background-color: #122b40;
@@ -176,22 +202,19 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
 
 .footer .footer-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1.5rem;
     padding-top: 2rem;
 }
 
-
 .footer .footer-container .logo{
     margin-left: 1rem;
-
 }
 
 .footer .footer-container .box h3,
 .footer .footer-container .box p{
-   color: white;
+    color: white;
 }
-
 
 .footer .footer-container .box .share a{
     color: white;
@@ -204,12 +227,12 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
     background: #265073;
     text-align: center;
     text-decoration: none;
-    cursor: pointer; 
+    cursor: pointer;
     transition: 0.4s;
 }
 
 .footer .footer-container .box .share a:hover{
-   transform: scale(0.7);
+    transform: scale(0.7);
 }
 
 .footer .footer-container .box .links{
@@ -222,8 +245,8 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
 }
 
 .footer .footer-container .box .links i{
-  padding-right: 0.5rem;
-  transition: 0.4s;
+    padding-right: 0.5rem;
+    transition: 0.4s;
 }
 
 .footer .footer-container .box .links:hover i{
@@ -237,17 +260,19 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
     margin-bottom: 1rem;
     border: none;
     padding-left: 0.5rem;
-
 }
 
 .footer .footer-container .newsletter .email:focus{
-   outline: none;
-   box-shadow: 0 0 0.4rem 0.3rem rgb(27, 227, 204);
+    outline: none;
+    box-shadow: 0 0 0.4rem 0.3rem rgb(27, 227, 204);
+}
 
+.footer .footer-container .newsletter .btn{
+    transition: 0.3s;
 }
 
 .footer .footer-container .newsletter .btn:hover{
-      transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .footer .credits{
@@ -259,17 +284,33 @@ text-shadow: 0.2rem 0.2rem 0.3rem cornflowerblue;
 }
 
 
-/* @media(max-width: 768px){
-    .background{
-        height: 50vh;
-    }
 
-    .background .nav-options{
-        padding: 1rem 2rem;
 
-    }
 
-    .background .nav-options a{
-        font-size: 0.6rem;
+
+#toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.show {
+    display: block;
+    animation: fadeInOut 3s ease-out;
+}
+  
+@keyframes fadeInOut {
+    0%, 100% {
+    opacity: 0;
     }
-} */
+    25%, 75% {
+    opacity: 1;
+    }
+}
+
+
